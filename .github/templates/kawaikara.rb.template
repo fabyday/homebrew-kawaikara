@@ -1,0 +1,27 @@
+cask "kawaikara" do 
+    version "__VERSION__"
+    
+    on_arm do 
+        sha256 "__ARM_SHA__"
+        url "__ARM_URL__",
+            verified: "__VERIFIED__"
+    end
+    
+    on_intel do 
+        sha256 "__INTEL_SHA__"
+        url "__INTEL_URL__",
+            verified: "__VERIFIED__"
+    end 
+
+    name  "kawaikara"
+    desc "Kawaiii OTT viewer"
+    
+    homepage "https://github.com/fabyday/kawaikara"
+    app "kawaikara.app"
+    zap trash: [
+    "~/Library/Application Support/kawaikara",
+    "~/Library/Preferences/com.kawaikara.*",
+        ]
+
+
+end
